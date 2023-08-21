@@ -84,6 +84,7 @@ void discard(queue* _list)  //remove the first element of queue
         _list->head = _list->head->next;    //move the head 
         int* ptr = (int*)temp->data;        //typecasting to integer pointer
         printf("\nElement discarded: %d", *ptr);    //dereferencing
+        free(ptr);  //freeing the allocated integer
         free(temp); //free the node to avoid memory leak    //freeing value
     }
 }
